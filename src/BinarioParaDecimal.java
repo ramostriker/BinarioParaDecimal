@@ -8,8 +8,8 @@ import java.util.Scanner;
                 String input = scanner.nextLine();
 
                 if (binarioValido(input)) {
-                    int equivalenteDecimal = binarioParaDecimal(input);
-                    System.out.println("Equivalente decimal: " + equivalenteDecimal);
+                    int decimalEquivalente = binarioParaDecimal(input);
+                    System.out.println("Decimal Equivalente: " + decimalEquivalente);
                 } else {
                     System.out.println("Entrada inválida. Certifique-se de inserir apenas 0 ou 1.");
                 }
@@ -20,15 +20,13 @@ import java.util.Scanner;
             }
 
             private static int binarioParaDecimal(String binario) {
-                int equivalenteDecimal = 0;
+                int decimalEquivalente = 0;
 
                 for (int i = 0; i < binario.length(); i++) {
                     int digito = binario.charAt(i) - '0';
-                    equivalenteDecimal = equivalenteDecimal * 2 + digito;
+                    decimalEquivalente = decimalEquivalente * 2 + digito;
                 }
 
-                return equivalenteDecimal;
+                return decimalEquivalente;
             }
-
-
     }
